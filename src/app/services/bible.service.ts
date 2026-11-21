@@ -14,7 +14,7 @@ import { HttpClient, httpResource } from '@angular/common/http';
 export class BibleService {
 
   version = signal<string>(localStorage.getItem('bibleVersion') || 'esv');
-  bibleUrl = 'https://imatson9119.github.io/bible-parser';
+  bibleUrl = 'https://ianmatson.github.io/bible-parser';
   wordMapFile = httpResource<WordMap>(
     () => ({  url: `${this.bibleUrl}/word_maps/${this.version()}.json` }),
     { parse: this.wordMapParser }
